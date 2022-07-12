@@ -3,7 +3,7 @@ import React from 'react'
 type Props = {}
 
 const EditParty = (props: Props) => {
-    return <div>editParty</div>
+    return <div>EditParty</div>
 }
 
 export default EditParty
