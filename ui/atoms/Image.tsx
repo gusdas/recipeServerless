@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import ImageTag from 'next/image'
 
 interface Props {
@@ -12,37 +12,31 @@ interface Props {
 }
 
 const Image = ({
-    width = '100px',
-    height = '100px',
+    width = '300px',
+    height = '300px',
     src = 'https://i.pinimg.com/564x/b9/cd/cc/b9cdccde10d5a581874f58bb7e914962.jpg',
     alt,
     radius = '50%',
-    margin = '50px',
+    margin = '10px',
 }: Props) => {
     return (
-        <ImgWrapper
-            width={width}
-            height={height}
-            margin={margin}
-            radius={radius}>
+        <ImgWrapper margin={margin} radius={radius}>
             <ImageTag width={width} height={height} src={src} alt={alt} />
         </ImgWrapper>
     )
 }
 
 interface wrapperProps {
-    width?: string
-    height?: string
     margin?: string
     radius?: string
 }
 
 const ImgWrapper = styled.div<wrapperProps>`
-    width: ${(props) => props.width};
-    height: ${(props) => (props.height ? props.height : '120px')};
     margin: ${(props) => props.margin};
-    border-radius: ${(props) => props.radius};
-    overflow: hidden;
+
+    img {
+        border-radius: ${(props) => props.radius};
+    }
 `
 
 export default Image
