@@ -9,10 +9,9 @@ const Grid = ({ children }: Props) => {
     return <StyledGrid>{children}</StyledGrid>
 }
 
-interface styledProps {
-    color?: string
-}
-const StyledGrid = styled.div<styledProps>`
-    display: flex;
+const StyledGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 `
 export default Grid

@@ -9,9 +9,10 @@ import Grid from 'ui/atoms/Grid'
 import Image from 'ui/atoms/Image'
 import Input from 'ui/atoms/Input'
 import Typography from 'ui/atoms/Typography'
+import Wrapper from 'ui/atoms/Wrapper'
 const Home: NextPage = () => {
     return (
-        <Grid>
+        <Wrapper>
             home
             <Button />
             <Image
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
                     console.log('hi')
                 }}
             />
-        </Grid>
+        </Wrapper>
     )
 }
 
