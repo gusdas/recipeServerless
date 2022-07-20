@@ -16,8 +16,8 @@ const Image = ({
     height = '300px',
     src = 'https://i.pinimg.com/564x/b9/cd/cc/b9cdccde10d5a581874f58bb7e914962.jpg',
     alt,
-    radius = '50%',
-    margin = '10px',
+    radius,
+    margin,
 }: Props) => {
     return (
         <ImgWrapper margin={margin} radius={radius}>

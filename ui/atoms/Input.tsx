@@ -1,12 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-type Props = {}
+import { Colar100 } from 'assets/colorSet'
+interface Props {
+    src?: string
+    placeholder?: string
+}
 
-const Input = (props: Props) => {
+const Input = ({ src, placeholder }: Props) => {
     return (
         <InputWrapper>
-            <StyledInput />
+            {src && <StyledIcon src={src} />}
+            <StyledInput placeholder={placeholder} />
         </InputWrapper>
     )
 }
@@ -16,21 +21,35 @@ interface styledProps {
 }
 
 const InputWrapper = styled.div<styledProps>`
-    width: 100%;
-    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0px 10px;
     box-sizing: border-box;
-    border-bottom: 1px solid black;
+
     margin-top: 16px;
 `
+const StyledIcon = styled.img`
+    width: 17px;
+    padding: 17px;
+    border-color: transparent;
+    border-bottom: 1px solid darkgrey;
 
+    &:focus {
+        outline: none;
+        border-bottom: 1px solid ${Colar100};
+    }
+`
 const StyledInput = styled.input`
     width: 100%;
-    border: none;
-    background: none;
+    padding: 10px;
+    border-color: transparent;
+    border-bottom: 1px solid darkgrey;
+
+    &:focus {
+        outline: none;
+        border-bottom: 1px solid ${Colar100};
+    }
 `
 
 export default Input
