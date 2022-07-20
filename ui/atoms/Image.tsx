@@ -12,8 +12,8 @@ interface Props {
 }
 
 const Image = ({
-    width = '300px',
-    height = '300px',
+    width = '100px',
+    height = '100px',
     src = 'https://i.pinimg.com/564x/b9/cd/cc/b9cdccde10d5a581874f58bb7e914962.jpg',
     alt,
     radius,
@@ -36,6 +36,9 @@ const ImgWrapper = styled.div<wrapperProps>`
 
     img {
         border-radius: ${(props) => props.radius};
+    }
+    &:hover {
+        cursor: pointer;
     }
 `
 

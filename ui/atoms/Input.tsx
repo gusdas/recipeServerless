@@ -3,21 +3,23 @@ import styled from 'styled-components'
 
 import { Colar100 } from 'assets/colorSet'
 interface Props {
-    src?: string
+    iconSrc?: string
     placeholder?: string
 }
 
-const Input = ({ src, placeholder }: Props) => {
+const Input = ({ iconSrc, placeholder }: Props) => {
+    const [active] = React.useState()
     return (
-        <InputWrapper>
-            {src && <StyledIcon src={src} />}
-            <StyledInput placeholder={placeholder} />
+        <InputWrapper active={active}>
+            {iconSrc && <StyledIcon src={iconSrc} />}
+            <StyledInput placeholder={placeholder} active={active} />
         </InputWrapper>
     )
 }
 
 interface styledProps {
     color?: string
+    active?: string
 }
 
 const InputWrapper = styled.div<styledProps>`
@@ -28,28 +30,24 @@ const InputWrapper = styled.div<styledProps>`
     box-sizing: border-box;
 
     margin-top: 16px;
+
+    border-color: transparent;
+    border-bottom: 1px solid darkgrey;
+    &:focus-within {
+        outline: none;
+        border-bottom: 1px solid ${Colar100};
+    }
 `
 const StyledIcon = styled.img`
+    height: 17px;
     width: 17px;
-    padding: 17px;
-    border-color: transparent;
-    border-bottom: 1px solid darkgrey;
-
-    &:focus {
-        outline: none;
-        border-bottom: 1px solid ${Colar100};
-    }
 `
-const StyledInput = styled.input`
+const StyledInput = styled.input<styledProps>`
     width: 100%;
     padding: 10px;
-    border-color: transparent;
-    border-bottom: 1px solid darkgrey;
+    outline: none;
 
-    &:focus {
-        outline: none;
-        border-bottom: 1px solid ${Colar100};
-    }
+    border: none;
 `
 
 export default Input
