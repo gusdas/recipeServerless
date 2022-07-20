@@ -10,9 +10,12 @@ import Image from 'ui/atoms/Image'
 import Input from 'ui/atoms/Input'
 import Typography from 'ui/atoms/Typography'
 import Wrapper from 'ui/atoms/Wrapper'
+
+import Header from 'ui/templates/Header'
 const Home: NextPage = () => {
     return (
         <Wrapper>
+            <Header />
             home
             <Button />
             <Image
@@ -20,11 +23,6 @@ const Home: NextPage = () => {
                 src='https://i.pinimg.com/564x/b9/cd/cc/b9cdccde10d5a581874f58bb7e914962.jpg'
             />
             <Input />
-            <Typography
-                _onClick={() => {
-                    console.log('hi')
-                }}
-            />
         </Wrapper>
     )
 }
