@@ -17,19 +17,14 @@ const Home: NextPage = () => {
     return (
         <Wrapper>
             <Header />
-            home
-            <Button />
-            home
-            <Button />
+
             <Input
                 iconSrc={search.src}
                 placeholder='오늘은 무엇을 만들어 볼까요?'
             />
-            {/* <Typography
-                _onClick={() => {
-                    console.log('hi')
-                }}
-            /> */}
+            <Wrapper margin='50px'>
+                <Button>hi</Button>
+            </Wrapper>
         </Wrapper>
     )
 }

@@ -15,8 +15,15 @@ const Header = () => {
     const [isLogin, setIsLogin] = React.useState(false)
     return (
         <HeaderWrapper>
-            <Link href='/autu/login' passHref>
-                <Image src={logoImg.src} alt='logo' />
+            <Link href='/' passHref>
+                <a>
+                    <Image
+                        width='75px'
+                        height='12px'
+                        src={logoImg.src}
+                        alt='logo'
+                    />
+                </a>
             </Link>
 
             {isLogin ? (
@@ -28,7 +35,11 @@ const Header = () => {
                     <Icon alt='profileIcon' src={profileImg.src} />
                 </Wrapper>
             ) : (
-                <Typography text='로그인' type='Sub2' />
+                <Link href='/auth/login' passHref>
+                    <a>
+                        <Typography text='로그인' type='Sub2' />
+                    </a>
+                </Link>
             )}
         </HeaderWrapper>
     )

@@ -18,8 +18,8 @@ const StyledWrapper = styled.div`
     height: 72px;
     background: white;
     box-sizing: border-box;
-    z-index: 100;
-    position: fixed;
+    /* z-index: 100;
+    position: fixed; */
 `
 
 export default HeaderWrapper
