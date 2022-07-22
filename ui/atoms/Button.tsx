@@ -41,7 +41,6 @@ const StyledButton = styled.div<styledProps>`
 
     width: 100%;
     height: 60px;
-    border: 1px solid black;
 
     color: ${(props) => props.color};
     background-color: ${(props) => props.bgColor};

@@ -9,23 +9,22 @@ import Image from 'ui/atoms/Image'
 import Input from 'ui/atoms/Input'
 import Typography from 'ui/atoms/Typography'
 import Wrapper from 'ui/atoms/Wrapper'
-
+import Dvider from 'ui/atoms/Dvider'
 import Header from 'ui/templates/Header'
 import search from 'assets/imgs/search.png'
 
 const Home: NextPage = () => {
     return (
-        <Wrapper>
+        <>
             <Header />
-
-            <Input
-                iconSrc={search.src}
-                placeholder='오늘은 무엇을 만들어 볼까요?'
-            />
-            <Wrapper margin='50px'>
-                <Button>hi</Button>
+            <Wrapper padding='16px'>
+                <Input
+                    iconSrc={search.src}
+                    placeholder='오늘은 무엇을 만들어 볼까요?'
+                />
             </Wrapper>
-        </Wrapper>
+            <Dvider mt='24px' />
+        </>
     )
 }
 

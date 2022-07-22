@@ -12,7 +12,7 @@ import alarmImg from 'assets/imgs/alarm.png'
 import profileImg from 'assets/imgs/profile.png'
 
 const Header = () => {
-    const [isLogin, setIsLogin] = React.useState(false)
+    const [isLogin, setIsLogin] = React.useState(true)
     return (
         <HeaderWrapper>
             <Link href='/' passHref>
@@ -32,6 +32,11 @@ const Header = () => {
                     justify='center'
                     align='center'
                     margin='0 11px 0 0'>
+                    <Icon
+                        alt='alarmIcon'
+                        src={alarmImg.src}
+                        margin='0 11px 0 0'
+                    />
                     <Icon alt='profileIcon' src={profileImg.src} />
                 </Wrapper>
             ) : (
