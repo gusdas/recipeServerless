@@ -1,7 +1,7 @@
 import { Colar100 } from 'assets/colorSet'
 import React from 'react'
 import styled from 'styled-components'
-import { Large1Font } from './../../assets/fonts'
+import { Large1Font } from 'assets/fonts'
 
 interface Props {
     children?: React.ReactNode | string

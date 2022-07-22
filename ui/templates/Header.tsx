@@ -10,9 +10,10 @@ import Image from 'ui/atoms/Image'
 import logoImg from 'assets/imgs/logo.png'
 import alarmImg from 'assets/imgs/alarm.png'
 import profileImg from 'assets/imgs/profile.png'
+import { Sub2Font } from 'assets/fonts'
 
 const Header = () => {
-    const [isLogin, setIsLogin] = React.useState(true)
+    const [isLogin, setIsLogin] = React.useState(false)
     return (
         <HeaderWrapper>
             <Link href='/' passHref>
@@ -42,7 +43,7 @@ const Header = () => {
             ) : (
                 <Link href='/auth/login' passHref>
                     <a>
-                        <Typography text='로그인' type='Sub2' />
+                        <Typography font={Sub2Font}>로그인</Typography>
                     </a>
                 </Link>
             )}
