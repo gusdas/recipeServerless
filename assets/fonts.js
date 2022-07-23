@@ -1,3 +1,5 @@
+import { Black40 } from './colorSet'
+
 export const Large1Font = `    
 font-size: 24pt;
 font-weight: 600;
@@ -47,6 +49,7 @@ font-size: 12pt;
 font-weight: 500;
 line-height: 120%;
 letter-spacing: 0.4px;
+color: ${Black40};
 `
 export const Caption2Font = `    
 font-size: 12pt;

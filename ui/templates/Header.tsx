@@ -13,10 +13,10 @@ import profileImg from 'assets/imgs/profile.png'
 import { Sub2Font } from 'assets/fonts'
 
 const Header = () => {
-    const [isLogin, setIsLogin] = React.useState(false)
+    const [isLogin, setIsLogin] = React.useState(true)
     return (
         <HeaderWrapper>
-            <Link href='/' passHref>
+            <Link href='/'>
                 <a>
                     <Image
                         width='75px'
@@ -33,15 +33,23 @@ const Header = () => {
                     justify='center'
                     align='center'
                     margin='0 11px 0 0'>
-                    <Icon
-                        alt='alarmIcon'
-                        src={alarmImg.src}
-                        margin='0 11px 0 0'
-                    />
-                    <Icon alt='profileIcon' src={profileImg.src} />
+                    <Link href='/noti'>
+                        <a>
+                            <Icon
+                                alt='alarmIcon'
+                                src={alarmImg.src}
+                                margin='0 11px 0 0'
+                            />
+                        </a>
+                    </Link>
+                    <Link href='/myInfo'>
+                        <a>
+                            <Icon alt='profileIcon' src={profileImg.src} />
+                        </a>
+                    </Link>
                 </Wrapper>
             ) : (
-                <Link href='/auth/login' passHref>
+                <Link href='/auth/login'>
                     <a>
                         <Typography font={Sub2Font}>로그인</Typography>
                     </a>

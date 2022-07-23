@@ -13,6 +13,7 @@ import Dvider from 'ui/atoms/Dvider'
 import Header from 'ui/templates/Header'
 import search from 'assets/imgs/search.png'
 
+import Banner from 'ui/organisms/Banner'
 import { Large2Font } from 'assets/fonts'
 const Home: NextPage = () => {
     return (
@@ -26,9 +27,7 @@ const Home: NextPage = () => {
             </Wrapper>
             <Dvider mt='24px' />
             <Wrapper padding='24px 16px'>
-                <Typography font={Large2Font}>
-                    지금 가장\n인기있는 레시피에요
-                </Typography>
+                <Banner text='지금 가장\n인기있는 레시피에요' url='/recipe' />
             </Wrapper>
         </>
     )

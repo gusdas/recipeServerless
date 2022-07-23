@@ -24,8 +24,9 @@ const Typography = ({
 }: Props) => {
     return (
         <div>
-            {children.split('\\n').map((v) => (
+            {children.split('\\n').map((v, idx) => (
                 <StyledTypography
+                    key={idx}
                     color={color}
                     margin={margin}
                     mt={mt}
