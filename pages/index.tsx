@@ -13,8 +13,9 @@ import Dvider from 'ui/atoms/Dvider'
 import Header from 'ui/templates/Header'
 import search from 'assets/imgs/search.png'
 
-import Banner from 'ui/organisms/Banner'
-import { Large2Font } from 'assets/fonts'
+import BannerText from 'ui/organisms/BannerText'
+import BannerImg from 'ui/organisms/BannerImg'
+
 const Home: NextPage = () => {
     return (
         <>
@@ -27,7 +28,17 @@ const Home: NextPage = () => {
             </Wrapper>
             <Dvider mt='24px' />
             <Wrapper padding='24px 16px'>
-                <Banner text='지금 가장\n인기있는 레시피에요' url='/recipe' />
+                <BannerText
+                    text='지금 가장\n인기있는 레시피에요'
+                    url='/recipe'
+                />
+                <BannerImg
+                    url='https://i.pinimg.com/564x/0e/e6/e5/0ee6e5a0ee77d6599e7bfd43f46e6c10.jpg'
+                    width='160px'
+                    id='id'
+                    cookTime='100분'
+                    isBookmark={true}
+                    title='제목'></BannerImg>
             </Wrapper>
         </>
     )

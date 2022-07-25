@@ -9,7 +9,7 @@ interface Props {
     url: string
 }
 
-const Banner = ({ text, url }: Props) => {
+const BannerText = ({ text, url }: Props) => {
     return (
         <Wrapper>
             <Wrapper
@@ -27,4 +27,4 @@ const Banner = ({ text, url }: Props) => {
         </Wrapper>
     )
 }
-export default Banner
+export default BannerText
